@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   resources :tests
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
+  resources :users
+
   namespace :api do
     namespace :admin do
       namespace :v1 do
@@ -14,7 +16,7 @@ Rails.application.routes.draw do
        get 'users/:user_id/appointments' => 'appointments#index'
        post 'users/:user_id/appointments' => 'appointments#create'
        patch 'users/:user_id/appointments/:id' => 'appointments#update'
-        
+
        # businesses
        get 'businesses/:id' => 'businesses#show'
 

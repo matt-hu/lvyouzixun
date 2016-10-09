@@ -49,3 +49,13 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# env file
+gem 'dotenv-rails'
+
+# use s3 to store image
+gem 'paperclip'
+gem 'aws-sdk', '~> 2'
+
+# user login authentication
+gem 'devise'
